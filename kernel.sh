@@ -38,9 +38,6 @@ KERNEL_DIR=$PWD
 # The name of the Kernel, to name the ZIP
 KERNEL="Kryptonite"
 
-# Kernel zip name type
-TYPE="HMP-OC"
-
 # The name of the device for which the kernel is built
 MODEL="Max Pro M1"
 
@@ -55,7 +52,7 @@ DEFCONFIG=X00TD_defconfig
 MANUFACTURERINFO="ASUSTek Computer Inc."
 
 # Kernel revision
-KERNELTYPE=HMP
+KERNELTYPE=EAS
 KERNELRELEASE=STABLE
 
 # Retrieves branch information
@@ -79,7 +76,7 @@ PTTG=1
 	if [ $PTTG = 1 ]
 	then
 		# Set Telegram Chat ID
-		CHATID="-495751416"
+		CHATID="-100495751416"
 	fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
