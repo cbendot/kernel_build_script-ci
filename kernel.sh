@@ -76,7 +76,7 @@ PTTG=1
 	if [ $PTTG = 1 ]
 	then
 		# Set Telegram Chat ID
-		CHATID="-100495751416"
+		CHATID="-495751416"
 	fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
@@ -88,7 +88,7 @@ BUILD_DTBO=0
 
 # Sign the zipfile
 # 1 is YES | 0 is NO
-SIGN=0
+SIGN=1
 
 # Debug purpose. Send logs on every successfull builds
 # 1 is YES | 0 is NO(default)
