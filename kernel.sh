@@ -46,13 +46,13 @@ DEVICE="X00TD"
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
-DEFCONFIG=X00T_defconfig
+DEFCONFIG=X00TD_defconfig
 
 # Show manufacturer info
 MANUFACTURERINFO="ASUSTek Computer Inc."
 
 # Kernel revision
-KERNELTYPE=EAS
+KERNELTYPE=HMP
 KERNELRELEASE=STABLE
 
 # Retrieves branch information
@@ -80,7 +80,7 @@ PTTG=1
 	fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
-DEF_REG=0
+DEF_REG=1
 
 # Build dtbo.img (select this only if your source has support to building dtbo.img)
 # 1 is YES | 0 is NO(default)
@@ -251,7 +251,10 @@ build_kernel() {
 	then
 		make -j"$PROCS" O=out \
 				CROSS_COMPILE_ARM32=arm-eabi- \
-			    CROSS_COMPILE=aarch64-elf-
+			        CROSS_COMPILE=aarch64-elf- \
+			        AR=aarch64-elf-ar \
+			        OBJDUMP=aarch64-elf-objdump \
+			        STRIP=aarch64-elf-strip \
 	fi
 
 
