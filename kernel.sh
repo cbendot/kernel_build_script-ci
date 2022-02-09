@@ -207,7 +207,7 @@ tg_post_build() {
 setversioning() {
 if [[ "$CI_BRANCH" == "main" ]]; then
     # For staging branch
-    KERNELNAME="$KERNEL-$DEVICE-$KERNELTYPE-$TYPE-$VERSION-$DATE"
+    KERNELNAME="$KERNEL-$DEVICE-$KERNELTYPE-$KERNELRELEASE-$VERSION-$DATE"
     # Export our new localversion and zipnames
     export KERNELTYPE KERNELNAME
     export ZIPNAME="$KERNELNAME.zip"
