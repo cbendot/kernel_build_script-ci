@@ -52,7 +52,7 @@ DEFCONFIG=X00TD_defconfig
 MANUFACTURERINFO="ASUSTek Computer Inc."
 
 # Kernel revision
-KERNELTYPE=HMP
+KERNELTYPE=EAS
 KERNELRELEASE=STABLE
 
 # Retrieves branch information
